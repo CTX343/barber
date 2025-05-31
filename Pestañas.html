@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curso Profesional de Pestañas</title>
+  <link href="est/css/bootstrap.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .hero {
+      background: url('img/pestanas-hero.jpg') center/cover no-repeat;
+      color: rgb(0, 0, 0);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .section {
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 30px;
+    }
+
+    .lista-iconos li {
+      margin-bottom: 10px;
+    }
+
+    .lista-iconos i {
+      color: #28a745;
+      margin-right: 8px;
+    }
+
+    footer {
+      background-color: #212529;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .btn-main {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      padding: 12px 30px;
+      border-radius: 8px;
+    }
+
+    .btn-main:hover {
+      background-color: #0056b3;
+    }
+
+    .card-precio {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .horarios p {
+      margin: 5px 0;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      right: -250px;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 2000;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+
+    .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 36px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <img src="img/logo-recortado.jpg" alt="" style="width: 15%;" />
+        <div class="" style="float: right;">
+          <a class="nav-link active menu-icon" onclick="openNav()" style="color: white;">
+            <i class="fa-solid fa-bars fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <div id="mySidebar" class="sidebar">
+      <span class="closebtn" onclick="closeNav()">&times;</span>
+      <a href="#">Inicio</a>
+      <a href="#" onclick="toggleCursos()">Cursos <i class="fa-solid fa-caret-down"></i></a>
+      <ul id="submenu-cursos" style="display: none; padding-left: 20px;">
+        <li><a class="dropdown-item" href="barberia.html">Barbería</a></li>
+        <li><a class="dropdown-item" href="Belleza.html">Cultura de belleza</a></li>
+        <li><a class="dropdown-item" href="EstilismoP.html">Estilismo Profesional</a></li>
+        <li><a class="dropdown-item" href="Cortes.html">Corte</a></li>
+        <li><a class="dropdown-item" href="Uñas.html">Aplicación de uñas</a></li>
+        <li><a class="dropdown-item" href="Colorimetria.html">Colorimetría</a></li>
+        <li><a class="dropdown-item" href="Permacologia.html">Permacología</a></li>
+        <li><a class="dropdown-item" href="Peinados.html">Peinado</a></li>
+        <li><a class="dropdown-item" href="Maquillajep.html">Maquillaje</a></li>
+      </ul>
+      <a href="#">Fotos</a>
+      <a href="#">Contacto</a>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <h1>Curso Profesional de Pestañas 👁️</h1>
+      <p>¡Domina las técnicas más solicitadas del momento!</p>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="container section">
+      <h2>Detalles del Curso</h2>
+      <ul class="lista-iconos">
+        <li><i class="fa-solid fa-calendar-days"></i><strong>Duración:</strong> 5 clases de 4 horas</li>
+        <li><i class="fa-solid fa-calendar-check"></i><strong>Modalidad:</strong> 1 a 3 clases por semana</li>
+        <li><i class="fa-solid fa-dollar-sign"></i><strong>Costo Total:</strong> $3,500 (¡Todo incluido!)</li>
+      </ul>
+
+      <h3>Incluye</h3>
+      <ul class="lista-iconos">
+        <li><i class="fa-solid fa-check"></i>Kit profesional completo</li>
+        <li><i class="fa-solid fa-shirt"></i>Filipina de trabajo</li>
+        <li><i class="fa-solid fa-certificate"></i>Diploma de reconocimiento</li>
+      </ul>
+
+      <h3>Horarios flexibles</h3>
+      <div class="horarios">
+        <p><i class="fa-solid fa-clock"></i> Lunes a viernes: <strong>10:00 a.m. – 6:00 p.m.</strong></p>
+        <p><i class="fa-solid fa-calendar-day"></i> Sábados: <strong>10:00 a.m. – 4:00 p.m.</strong></p>
+        <p><i class="fa-solid fa-user-clock"></i> Elige los días y horarios que mejor se acomoden a tu agenda</p>
+      </div>
+
+      <h3 class="mt-4">¿Qué aprenderás?</h3>
+      <ul class="lista-iconos">
+        <li><i class="fa-solid fa-check"></i>Aplicación de extensiones clásicas, híbridas y volumen ruso</li>
+        <li><i class="fa-solid fa-check"></i>Diseño personalizado de pestañas según el tipo de ojo</li>
+        <li><i class="fa-solid fa-check"></i>Lifting de pestañas y colocación correcta</li>
+        <li><i class="fa-solid fa-check"></i>Técnicas de aislamiento, relleno y retiro</li>
+        <li><i class="fa-solid fa-check"></i>Higiene, esterilización y atención al cliente</li>
+        <li><i class="fa-solid fa-check"></i>Consejos para emprender tu propio negocio</li>
+      </ul>
+
+      <div class="text-center mt-4">
+        <a href="https://wa.me/5215660911190" target="_blank" class="btn btn-main">
+          <i class="fa-brands fa-whatsapp"></i> ¡Inscríbete por WhatsApp!
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DermoEstilo - Formación profesional en belleza y estética</p>
+  </footer>
+
+  <script src="est/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.right = "0";
+    }
+    function closeNav() {
+      document.getElementById("mySidebar").style.right = "-250px";
+    }
+    function toggleCursos() {
+      const submenu = document.getElementById("submenu-cursos");
+      submenu.style.display = submenu.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
